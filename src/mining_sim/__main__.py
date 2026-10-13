@@ -1,7 +1,7 @@
 import time
 
 from mining_sim.config import parse_args
-from mining_sim.report import create_report
+from mining_sim.report import build_report, write_report
 from mining_sim.simulation import Simulation
 
 
@@ -28,7 +28,10 @@ def main() -> None:
 
     print(f"sum truck unloads == sum station unloads: {sum_unloads} == {sum_station_unloads}")
 
-    create_report(config=config, trucks=trucks, stations=stations, sim_time=simulation_time)
+    write_report(
+        build_report(config=config, trucks=trucks, stations=stations, sim_time=simulation_time),
+        config=config,
+    )
 
 
 if __name__ == "__main__":

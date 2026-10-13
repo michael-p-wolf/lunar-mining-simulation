@@ -1,3 +1,103 @@
-Simulation Report:
+ ----- Simulation Report -----
 10 trucks, 3 stations, 72 hours simulated, seed = 0
-Simulated unloading of 0 trucks in 0.001s of real time
+Completed unloads: 146 (simulated in 0.00078s of real time)
+
+ --- Overall Truck Statistics ---
+Average unloads per truck: 14.60 (min 13, max 16)
+Average share of time spent:
+	Mining: 63.27%
+	Waiting: 0.98%
+	Unloading: 15.34%
+	Traveling: 20.42%
+
+Most unloads (16): #3
+Fewest unloads (13): #0
+Least time waiting (0.00%): #3
+Most time waiting (2.01%): #6
+
+ --- Overall Station Statistics ---
+Average unloads per station: 48.67 (min 47, max 50)
+Average share of time spent:
+	Idle: 48.88%
+	Unloading: 51.12%
+
+Most unloads (50): #0
+Fewest unloads (47): #2
+Lowest time idle (47.41%): #0
+Highest time idle (50.56%): #1
+
+ --- Individual Trucks ---
+**Truck #0: 13 unloads
+	Mining: 68.06%
+	Waiting: 0.46%
+	Unloading: 12.96%
+	Traveling: 18.52%
+
+**Truck #1: 15 unloads
+	Mining: 63.40%
+	Waiting: 1.04%
+	Unloading: 14.72%
+	Traveling: 20.83%
+
+**Truck #2: 14 unloads
+	Mining: 65.23%
+	Waiting: 0.16%
+	Unloading: 15.16%
+	Traveling: 19.44%
+
+**Truck #3: 16 unloads
+	Mining: 61.74%
+	Waiting: 0.00%
+	Unloading: 16.04%
+	Traveling: 22.22%
+
+**Truck #4: 15 unloads
+	Mining: 61.11%
+	Waiting: 1.81%
+	Unloading: 15.56%
+	Traveling: 21.53%
+
+**Truck #5: 15 unloads
+	Mining: 61.11%
+	Waiting: 1.76%
+	Unloading: 16.06%
+	Traveling: 21.06%
+
+**Truck #6: 15 unloads
+	Mining: 61.11%
+	Waiting: 2.01%
+	Unloading: 16.04%
+	Traveling: 20.83%
+
+**Truck #7: 14 unloads
+	Mining: 64.81%
+	Waiting: 0.51%
+	Unloading: 15.23%
+	Traveling: 19.44%
+
+**Truck #8: 14 unloads
+	Mining: 64.65%
+	Waiting: 0.79%
+	Unloading: 15.12%
+	Traveling: 19.44%
+
+**Truck #9: 15 unloads
+	Mining: 61.44%
+	Waiting: 1.27%
+	Unloading: 16.46%
+	Traveling: 20.83%
+
+
+ --- Individual Stations ---
+**Station #0: 50 unloads
+	Idle: 47.41%
+	Unloading: 52.59%
+
+**Station #1: 49 unloads
+	Idle: 50.56%
+	Unloading: 49.44%
+
+**Station #2: 47 unloads
+	Idle: 48.68%
+	Unloading: 51.32%
+
