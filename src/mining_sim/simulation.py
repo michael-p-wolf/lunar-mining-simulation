@@ -70,6 +70,20 @@ class Simulation:
 
         self._time = self._config.sim_minutes
 
+        sum_unloads = 0
+        for truck in self._trucks:
+            print(f"Truck {truck.truck_id}:")
+            print(f"\ttotal unloads: {truck.total_unloads}")
+            sum_unloads += truck.total_unloads
+
+        sum_station_unloads = 0
+        for station in self._stations:
+            print(f"Station {station.station_id}:")
+            print(f"\ttrucks unloaded: {station.trucks_unloaded}")
+            sum_station_unloads += station.trucks_unloaded
+
+        print(f"sum truck unloads == sum station unloads: {sum_unloads} == {sum_station_unloads}")
+
         # TODO: close truck mid-task and idle stations
         # TODO: return results of stats
 
@@ -77,9 +91,10 @@ class Simulation:
         """Move a truck onto the next phase when it has completed previous phase"""
         # waiting state cannot happen, we just popped from the heap
 
+        current_time = self._time
+
         if truck.phase == TruckPhase.UNLOADING:
             # completed unloading, update truck
-            current_time = self._time
 
             if truck.current_station_id is None:
                 raise RuntimeError(
@@ -135,7 +150,7 @@ class Simulation:
                 new_truck.time_waiting += current_time - new_truck.task_started_at
                 new_truck.task_started_at = current_time
 
-                self._insert_truck_heap(truck=truck)
+                self._insert_truck_heap(truck=new_truck)
 
                 # Recalculate estimated waiting time
                 station.ready_time_estimate = new_truck.ready_time + AVG_UNLOAD_TIME * (
@@ -146,15 +161,59 @@ class Simulation:
                 # The station queue is empty and it now idle
                 station.ready_time_estimate = current_time
 
-        if truck.phase == TruckPhase.TO_UNLOAD:
+        elif truck.phase == TruckPhase.TO_UNLOAD:
             # Truck has arrived to unloading station, needs to begin unloading
-            print("start unloading")
+            truck.time_traveling += current_time - truck.task_started_at
+            truck.task_started_at = current_time
 
-        if truck.phase == TruckPhase.TO_MINING:
-            print("start mining")
+            # Find the next station for a truck
+            station = self._stations[0]
+            min_time_ready = station.ready_time_estimate
 
-        if truck.phase == TruckPhase.MINING:
-            print("drive to station")
+            for s in self._stations:
+                if s.ready_time_estimate < min_time_ready:
+                    station = s
+                    min_time_ready = s.ready_time_estimate
+
+            truck.current_station_id = station.station_id
+            station.queue.append(truck)
+
+            if len(station.queue) == 1:
+                # truck can begin unloading
+                truck.phase = TruckPhase.UNLOADING
+                unload_time = self._random.randint(UNLOAD_MIN_TIME, UNLOAD_MAX_TIME)
+                truck.ready_time = current_time + unload_time
+                self._insert_truck_heap(truck=truck)
+
+                station.time_idle += current_time - station.task_started_at
+                station.task_started_at = current_time
+                station.ready_time_estimate = truck.ready_time
+
+            else:
+                # truck must wait in station queue
+                truck.phase = TruckPhase.WAITING
+                truck.ready_time = None
+                station.ready_time_estimate += AVG_UNLOAD_TIME
+
+        elif truck.phase == TruckPhase.TO_MINING:
+            # Truck has arrived at a mine and can begin mining
+            truck.phase = TruckPhase.MINING
+            truck.ready_time = current_time + self._random_mining_time_min()
+            truck.time_traveling += current_time - truck.task_started_at
+            truck.task_started_at = current_time
+            self._insert_truck_heap(truck=truck)
+
+        elif truck.phase == TruckPhase.MINING:
+            # Truck has completed mining and can begin driving to unload
+            truck.phase = TruckPhase.TO_UNLOAD
+            truck.ready_time = current_time + TRUCK_TRAVEL_TIME
+            truck.time_mining += current_time - truck.task_started_at
+            truck.task_started_at = current_time
+            self._insert_truck_heap(truck=truck)
+        else:
+            print(truck)
+            print(self._stations[truck.current_station_id])
+            raise RuntimeError(f"Truck (id: {truck.truck_id}) is ready but in phase {truck.phase} @ time {current_time}")
 
     def _close(self) -> None:
         print("_close")
