@@ -211,12 +211,37 @@ class Simulation:
             truck.task_started_at = current_time
             self._insert_truck_heap(truck=truck)
         else:
-            print(truck)
-            print(self._stations[truck.current_station_id])
-            raise RuntimeError(f"Truck (id: {truck.truck_id}) is ready but in phase {truck.phase} @ time {current_time}")
+            raise RuntimeError(
+                f"Truck (id: {truck.truck_id}) is ready but in "
+                f"phase {truck.phase} @ time {current_time}"
+            )
 
     def _close(self) -> None:
-        print("_close")
+        """"""
+
+        if self._time < self._config.sim_minutes:
+            raise RuntimeError(
+                f"calling close at time {self._time}, "
+                f"before end of sim at time {self._config.sim_minutes}"
+            )
+
+        for truck in self._trucks:
+            task_time = self._time - truck.task_started_at
+            if truck.phase == TruckPhase.UNLOADING:
+                truck.time_unloading += task_time
+            elif truck.phase in (TruckPhase.TO_UNLOAD, TruckPhase.TO_MINING):
+                truck.time_traveling += task_time
+            elif truck.phase == TruckPhase.MINING:
+                truck.time_mining += task_time
+            elif truck.phase == TruckPhase.WAITING:
+                truck.time_waiting += task_time
+
+        for station in self._stations:
+            task_time = self._time - station.task_started_at
+            if station.queue:
+                station.time_unloading += task_time
+            else:
+                station.time_idle += task_time
 
     def _insert_truck_heap(self, truck: Truck) -> None:
         """Push truck onto heap with ready_time
