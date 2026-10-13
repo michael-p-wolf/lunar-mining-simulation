@@ -6,5 +6,6 @@ def main() -> None:
     print(config)
     print(config.sim_minutes)
 
+
 if __name__ == "__main__":
     main()

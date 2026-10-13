@@ -20,6 +20,7 @@ _DEFAULT_NUM_STATIONS = 3
 _DEFAULT_SIM_HOURS = 72
 _DEFAULT_SEED = 0
 
+
 @dataclass(frozen=True)
 class Config:
     num_trucks: int = _DEFAULT_NUM_TRUCKS
@@ -50,10 +51,7 @@ def parse_args(argv: list[str] | None = None) -> Config:
     args = parser.parse_args(argv)
     try:
         return Config(
-            num_trucks=args.trucks,
-            num_stations=args.stations,
-            sim_hours=args.hours,
-            seed=args.seed
+            num_trucks=args.trucks, num_stations=args.stations, sim_hours=args.hours, seed=args.seed
         )
     except ValueError as e:
         parser.error(str(e))
