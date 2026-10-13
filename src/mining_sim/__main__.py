@@ -1,4 +1,5 @@
-from mining_sim.config import Config, parse_args
+from mining_sim.config import parse_args
+
 
 def main() -> None:
     config = parse_args()
