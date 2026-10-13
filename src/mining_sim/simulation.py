@@ -60,7 +60,7 @@ class Simulation:
             station = Station(station_id=j)
             self._stations.append(station)
 
-    def run(self) -> None:
+    def run(self) -> tuple[list[Truck], list[Station]]:
         """"""
 
         while self._heap and self._heap[0].time <= self._config.sim_minutes:
@@ -70,22 +70,9 @@ class Simulation:
 
         self._time = self._config.sim_minutes
 
-        sum_unloads = 0
-        for truck in self._trucks:
-            print(f"Truck {truck.truck_id}:")
-            print(f"\ttotal unloads: {truck.total_unloads}")
-            sum_unloads += truck.total_unloads
+        self._close()
 
-        sum_station_unloads = 0
-        for station in self._stations:
-            print(f"Station {station.station_id}:")
-            print(f"\ttrucks unloaded: {station.trucks_unloaded}")
-            sum_station_unloads += station.trucks_unloaded
-
-        print(f"sum truck unloads == sum station unloads: {sum_unloads} == {sum_station_unloads}")
-
-        # TODO: close truck mid-task and idle stations
-        # TODO: return results of stats
+        return self._trucks, self._stations
 
     def _process_truck(self, truck: Truck) -> None:
         """Move a truck onto the next phase when it has completed previous phase"""
