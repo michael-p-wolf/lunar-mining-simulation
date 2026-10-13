@@ -14,12 +14,18 @@ UNLOAD_MAX_TIME = 60
 # expected unload time for truck waiting in queue at a station
 AVG_UNLOAD_TIME = (UNLOAD_MIN_TIME + UNLOAD_MAX_TIME) / 2
 
+# private defaults, should not be used elsewhere
+_DEFAULT_NUM_TRUCKS = 10
+_DEFAULT_NUM_STATIONS = 3
+_DEFAULT_SIM_HOURS = 72
+_DEFAULT_SEED = 0
+
 @dataclass(frozen=True)
 class Config:
-    num_trucks: int = 10
-    num_stations: int = 3
-    sim_hours: int = 72
-    seed: int = 0
+    num_trucks: int = _DEFAULT_NUM_TRUCKS
+    num_stations: int = _DEFAULT_NUM_STATIONS
+    sim_hours: int = _DEFAULT_SIM_HOURS
+    seed: int = _DEFAULT_SEED
 
     def __post_init__(self) -> None:
         if self.num_trucks < 1:
