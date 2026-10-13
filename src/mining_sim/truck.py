@@ -17,6 +17,7 @@ class Truck:
     truck_id: int
     phase: TruckPhase
     ready_time: int | None  # absolute time
+    current_station_id: int | None = None
 
     # statistics for report
     task_started_at: int = 0

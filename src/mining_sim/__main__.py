@@ -1,10 +1,11 @@
 from mining_sim.config import parse_args
+from mining_sim.simulation import Simulation
 
 
 def main() -> None:
     config = parse_args()
-    print(config)
-    print(config.sim_minutes)
+    simulation = Simulation(config=config)
+    simulation.run()
 
 
 if __name__ == "__main__":

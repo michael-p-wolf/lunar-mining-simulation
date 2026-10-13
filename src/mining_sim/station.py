@@ -10,8 +10,9 @@ class Station:
 
     station_id: int
     queue: deque[Truck] = field(default_factory=deque)
-    ready_time_estimate: int = (
+    ready_time_estimate: float = (
         0  # accurate if 0 or 1 truck in queue, estimate if >= 2, absolute time
+        # made float for config.AVG_UNLOAD_TIME
     )
 
     # statistics for report
