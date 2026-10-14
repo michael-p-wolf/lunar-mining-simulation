@@ -153,14 +153,7 @@ class Simulation:
             truck.time_traveling += current_time - truck.task_started_at
             truck.task_started_at = current_time
 
-            # Find the next station for a truck
-            station = self._stations[0]
-            min_time_ready = station.ready_time_estimate
-
-            for s in self._stations:
-                if s.ready_time_estimate < min_time_ready:
-                    station = s
-                    min_time_ready = s.ready_time_estimate
+            station = self._pick_station()
 
             truck.current_station_id = station.station_id
             station.queue.append(truck)
@@ -202,6 +195,17 @@ class Simulation:
                 f"Truck (id: {truck.truck_id}) is ready but in "
                 f"phase {truck.phase} @ time {current_time}"
             )
+
+    def _pick_station(self) -> Station:
+        """
+        Return the station with the shortest wait (least ready_time_estimate)
+
+        An idle station's ready time is the time it went idle, so the longest-idle
+        station will be chosen.  Any idle station beats a busy one.  Busy stations
+        wait time is the ready time of the truck actively unloading plus the
+        average estimated wait times the number of trucks waiting in that queue
+        """
+        return min(self._stations, key=lambda s: s.ready_time_estimate)
 
     def _close(self) -> None:
         """"""
