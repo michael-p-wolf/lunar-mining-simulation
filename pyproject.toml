@@ -13,9 +13,9 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=8",                     # test runner
-    "ruff>=0.6",                     # linter + formatter
-    "mypy>=1.10",                    # static type checker (works off your type hints)
+    "pytest>=8",
+    "ruff>=0.6",
+    "mypy>=1.10",
 ]
 
 [project.scripts]

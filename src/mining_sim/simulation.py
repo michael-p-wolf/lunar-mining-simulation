@@ -1,4 +1,4 @@
-"""Functions for running simulation"""
+"""Simulation entity and methods for running simulation"""
 
 import heapq
 import random
@@ -123,15 +123,13 @@ class Simulation:
                 new_truck = station.queue[0]
                 if new_truck.phase != TruckPhase.WAITING:
                     raise RuntimeError(
-                        f"Truck (id: {truck.truck_id}) was waiting at station "
+                        f"Truck (id: {new_truck.truck_id}) was waiting at station "
                         f"(id: {station.station_id}) but not WAITING"
                     )
 
                 unload_time = self._random_unload_time_min()
                 new_truck.phase = TruckPhase.UNLOADING
-                new_truck.current_station_id = (
-                    station.station_id
-                )  # shouldn't need this based on how we process waiting
+                new_truck.current_station_id = station.station_id
                 new_truck.ready_time = current_time + unload_time
 
                 # Updating statistics fields

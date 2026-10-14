@@ -1,4 +1,4 @@
-"""Represetnation of mining trucks and Enum for possible actions"""
+"""Representation of mining trucks and Enum for possible actions"""
 
 from dataclasses import dataclass
 from enum import StrEnum

@@ -17,10 +17,12 @@ def main() -> None:
 
     simulation_time = end_time - start_time
 
-    write_report(
+    path = write_report(
         build_report(config=config, trucks=trucks, stations=stations, sim_time=simulation_time),
         config=config,
     )
+
+    print(f"Report written to {path}")
 
 
 if __name__ == "__main__":

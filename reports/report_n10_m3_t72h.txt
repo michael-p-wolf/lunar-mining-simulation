@@ -1,6 +1,6 @@
  ----- Simulation Report -----
 10 trucks, 3 stations, 72 hours simulated, seed = 0
-Completed unloads: 146 (simulated in 0.00083s of real time)
+Completed unloads: 146 (simulated in 0.00068s of real time)
 
  --- Overall Truck Statistics ---
 Average unloads per truck: 14.60 (min 13, max 16)

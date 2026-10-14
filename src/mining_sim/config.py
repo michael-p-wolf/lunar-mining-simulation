@@ -25,7 +25,7 @@ _DEFAULT_SEED = 0
 
 @dataclass(frozen=True)
 class Config:
-    """Assign defualt values if none provided, check cli args valid"""
+    """Assign default values if none provided, check cli args valid"""
 
     num_trucks: int = _DEFAULT_NUM_TRUCKS
     num_stations: int = _DEFAULT_NUM_STATIONS

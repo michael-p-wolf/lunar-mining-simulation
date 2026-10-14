@@ -1,0 +1,99 @@
+ ----- Simulation Report -----
+10 trucks, 2 stations, 72 hours simulated, seed = 0
+Completed unloads: 140 (simulated in 0.00068s of real time)
+
+ --- Overall Truck Statistics ---
+Average unloads per truck: 14.00 (min 12, max 16)
+Average share of time spent:
+	Mining: 61.53%
+	Waiting: 4.34%
+	Unloading: 14.53%
+	Traveling: 19.60%
+
+Most unloads (16): #9
+Fewest unloads (12): #4, #8
+Least time waiting (3.59%): #0, #5
+Most time waiting (5.81%): #9
+
+ --- Overall Station Statistics ---
+Average unloads per station: 70.00 (min 68, max 72)
+Average share of time spent:
+	Idle: 27.37%
+	Unloading: 72.63%
+
+Most unloads (72): #0
+Fewest unloads (68): #1
+Lowest time idle (25.58%): #0
+Highest time idle (29.17%): #1
+
+ --- Individual Trucks ---
+**Truck #0: 13 unloads
+	Mining: 65.28%
+	Waiting: 3.59%
+	Unloading: 12.38%
+	Traveling: 18.75%
+
+**Truck #1: 14 unloads
+	Mining: 61.16%
+	Waiting: 4.35%
+	Unloading: 15.05%
+	Traveling: 19.44%
+
+**Truck #2: 15 unloads
+	Mining: 59.72%
+	Waiting: 4.28%
+	Unloading: 14.91%
+	Traveling: 21.09%
+
+**Truck #3: 14 unloads
+	Mining: 61.55%
+	Waiting: 4.38%
+	Unloading: 14.63%
+	Traveling: 19.44%
+
+**Truck #4: 12 unloads
+	Mining: 65.28%
+	Waiting: 4.95%
+	Unloading: 12.73%
+	Traveling: 17.04%
+
+**Truck #5: 15 unloads
+	Mining: 58.33%
+	Waiting: 3.59%
+	Unloading: 16.55%
+	Traveling: 21.53%
+
+**Truck #6: 15 unloads
+	Mining: 59.42%
+	Waiting: 4.49%
+	Unloading: 15.25%
+	Traveling: 20.83%
+
+**Truck #7: 14 unloads
+	Mining: 63.06%
+	Waiting: 3.84%
+	Unloading: 13.66%
+	Traveling: 19.44%
+
+**Truck #8: 12 unloads
+	Mining: 66.00%
+	Waiting: 4.07%
+	Unloading: 13.26%
+	Traveling: 16.67%
+
+**Truck #9: 16 unloads
+	Mining: 55.56%
+	Waiting: 5.81%
+	Unloading: 16.83%
+	Traveling: 21.81%
+
+
+ --- Individual Stations ---
+**Station #0: 72 unloads
+	Idle: 25.58%
+	Unloading: 74.42%
+
+**Station #1: 68 unloads
+	Idle: 29.17%
+	Unloading: 70.83%
+
