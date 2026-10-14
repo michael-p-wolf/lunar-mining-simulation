@@ -1,3 +1,5 @@
+"""Functions for running simulation"""
+
 import heapq
 import random
 from typing import NamedTuple
@@ -35,8 +37,7 @@ class Event(NamedTuple):
 
 
 class Simulation:
-    # TODO: docstring
-    """"""
+    """run() is the only public method"""
 
     def __init__(self, config: Config) -> None:
         """Initialize simulation with n trucks and m stations"""
@@ -61,7 +62,7 @@ class Simulation:
             self._stations.append(station)
 
     def run(self) -> tuple[list[Truck], list[Station]]:
-        """"""
+        """Run this simulation and return the trucks and stations involved"""
 
         while self._heap and self._heap[0].time <= self._config.sim_minutes:
             event = heapq.heappop(self._heap)
@@ -126,7 +127,7 @@ class Simulation:
                         f"(id: {station.station_id}) but not WAITING"
                     )
 
-                unload_time = self._random.randint(UNLOAD_MIN_TIME, UNLOAD_MAX_TIME)
+                unload_time = self._random_unload_time_min()
                 new_truck.phase = TruckPhase.UNLOADING
                 new_truck.current_station_id = (
                     station.station_id
@@ -161,7 +162,7 @@ class Simulation:
             if len(station.queue) == 1:
                 # truck can begin unloading
                 truck.phase = TruckPhase.UNLOADING
-                unload_time = self._random.randint(UNLOAD_MIN_TIME, UNLOAD_MAX_TIME)
+                unload_time = self._random_unload_time_min()
                 truck.ready_time = current_time + unload_time
                 self._insert_truck_heap(truck=truck)
 
@@ -208,7 +209,7 @@ class Simulation:
         return min(self._stations, key=lambda s: s.ready_time_estimate)
 
     def _close(self) -> None:
-        """"""
+        """Run once at end of simulation to round out statistic fields"""
 
         if self._time < self._config.sim_minutes:
             raise RuntimeError(
@@ -257,3 +258,9 @@ class Simulation:
         [MINING_MIN_HOURS, MINING_MAX_HOURS] (inclusive) hours (resolution 1 hour)
         """
         return 60 * self._random.randint(MINING_MIN_HOURS, MINING_MAX_HOURS)
+
+    def _random_unload_time_min(self) -> int:
+        """Generate a random unload time in minutes
+        between [UNLOAD_MIN_TIME, UNLOAD_MAX_TIME] inclusive
+        """
+        return self._random.randint(UNLOAD_MIN_TIME, UNLOAD_MAX_TIME)

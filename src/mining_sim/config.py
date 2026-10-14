@@ -1,3 +1,5 @@
+"""Define read-only values the simulation will use"""
+
 import argparse
 from dataclasses import dataclass
 
@@ -23,6 +25,8 @@ _DEFAULT_SEED = 0
 
 @dataclass(frozen=True)
 class Config:
+    """Assign defualt values if none provided, check cli args valid"""
+
     num_trucks: int = _DEFAULT_NUM_TRUCKS
     num_stations: int = _DEFAULT_NUM_STATIONS
     sim_hours: int = _DEFAULT_SIM_HOURS
@@ -42,6 +46,7 @@ class Config:
 
 
 def parse_args(argv: list[str] | None = None) -> Config:
+    """parse cli args and create config for sim"""
     default = Config()
     parser = argparse.ArgumentParser(prog="mining_sim")
     parser.add_argument("--hours", type=int, default=default.sim_hours)

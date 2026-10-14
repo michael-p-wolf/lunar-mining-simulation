@@ -1,0 +1,811 @@
+ ----- Simulation Report -----
+100 trucks, 45 stations, 96 hours simulated, seed = 2
+Completed unloads: 1966 (simulated in 0.01208s of real time)
+
+ --- Overall Truck Statistics ---
+Average unloads per truck: 19.66 (min 17, max 23)
+Average share of time spent:
+	Mining: 63.99%
+	Waiting: 0.00%
+	Unloading: 15.42%
+	Traveling: 20.59%
+
+Most unloads (23): #59, #66
+Fewest unloads (17): #6, #62, #63
+Least time waiting (0.00%): #0, #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23, #24, #25, #26, #27, #28, #29, #30, #31, #32, #33, #34, #35, #36, #37, #38, #39, #40, #41, #42, #43, #44, #45, #46, #47, #48, #49, #50, #51, #52, #53, #54, #55, #56, #57, #58, #59, #60, #61, #62, #63, #64, #65, #66, #67, #68, #69, #70, #71, #72, #73, #74, #75, #76, #77, #78, #79, #80, #81, #82, #83, #84, #85, #86, #87, #88, #89, #90, #91, #92, #93, #94, #95, #96, #97, #98, #99
+Most time waiting (0.00%): #0, #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23, #24, #25, #26, #27, #28, #29, #30, #31, #32, #33, #34, #35, #36, #37, #38, #39, #40, #41, #42, #43, #44, #45, #46, #47, #48, #49, #50, #51, #52, #53, #54, #55, #56, #57, #58, #59, #60, #61, #62, #63, #64, #65, #66, #67, #68, #69, #70, #71, #72, #73, #74, #75, #76, #77, #78, #79, #80, #81, #82, #83, #84, #85, #86, #87, #88, #89, #90, #91, #92, #93, #94, #95, #96, #97, #98, #99
+
+ --- Overall Station Statistics ---
+Average unloads per station: 43.69 (min 42, max 45)
+Average share of time spent:
+	Idle: 65.73%
+	Unloading: 34.27%
+
+Most unloads (45): #4, #9, #11, #14, #27, #34
+Fewest unloads (42): #30, #43, #44
+Lowest time idle (64.57%): #10
+Highest time idle (67.36%): #38
+
+ --- Individual Trucks ---
+**Truck #0: 20 unloads
+	Mining: 63.16%
+	Waiting: 0.00%
+	Unloading: 16.01%
+	Traveling: 20.83%
+
+**Truck #1: 21 unloads
+	Mining: 61.91%
+	Waiting: 0.00%
+	Unloading: 16.22%
+	Traveling: 21.88%
+
+**Truck #2: 20 unloads
+	Mining: 62.71%
+	Waiting: 0.00%
+	Unloading: 16.46%
+	Traveling: 20.83%
+
+**Truck #3: 20 unloads
+	Mining: 62.29%
+	Waiting: 0.00%
+	Unloading: 16.88%
+	Traveling: 20.83%
+
+**Truck #4: 22 unloads
+	Mining: 59.70%
+	Waiting: 0.00%
+	Unloading: 17.38%
+	Traveling: 22.92%
+
+**Truck #5: 20 unloads
+	Mining: 61.77%
+	Waiting: 0.00%
+	Unloading: 17.40%
+	Traveling: 20.83%
+
+**Truck #6: 17 unloads
+	Mining: 67.71%
+	Waiting: 0.00%
+	Unloading: 14.60%
+	Traveling: 17.69%
+
+**Truck #7: 20 unloads
+	Mining: 64.58%
+	Waiting: 0.00%
+	Unloading: 14.51%
+	Traveling: 20.90%
+
+**Truck #8: 21 unloads
+	Mining: 60.35%
+	Waiting: 0.00%
+	Unloading: 17.78%
+	Traveling: 21.88%
+
+**Truck #9: 19 unloads
+	Mining: 65.23%
+	Waiting: 0.00%
+	Unloading: 14.98%
+	Traveling: 19.79%
+
+**Truck #10: 20 unloads
+	Mining: 63.07%
+	Waiting: 0.00%
+	Unloading: 16.09%
+	Traveling: 20.83%
+
+**Truck #11: 19 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 16.15%
+	Traveling: 20.31%
+
+**Truck #12: 20 unloads
+	Mining: 63.98%
+	Waiting: 0.00%
+	Unloading: 15.19%
+	Traveling: 20.83%
+
+**Truck #13: 19 unloads
+	Mining: 65.47%
+	Waiting: 0.00%
+	Unloading: 14.74%
+	Traveling: 19.79%
+
+**Truck #14: 20 unloads
+	Mining: 61.46%
+	Waiting: 0.00%
+	Unloading: 17.19%
+	Traveling: 21.35%
+
+**Truck #15: 21 unloads
+	Mining: 62.40%
+	Waiting: 0.00%
+	Unloading: 15.73%
+	Traveling: 21.88%
+
+**Truck #16: 18 unloads
+	Mining: 67.27%
+	Waiting: 0.00%
+	Unloading: 13.98%
+	Traveling: 18.75%
+
+**Truck #17: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.10%
+	Traveling: 21.35%
+
+**Truck #18: 18 unloads
+	Mining: 67.10%
+	Waiting: 0.00%
+	Unloading: 14.15%
+	Traveling: 18.75%
+
+**Truck #19: 19 unloads
+	Mining: 64.58%
+	Waiting: 0.00%
+	Unloading: 15.64%
+	Traveling: 19.77%
+
+**Truck #20: 20 unloads
+	Mining: 63.99%
+	Waiting: 0.00%
+	Unloading: 15.17%
+	Traveling: 20.83%
+
+**Truck #21: 20 unloads
+	Mining: 63.65%
+	Waiting: 0.00%
+	Unloading: 15.52%
+	Traveling: 20.83%
+
+**Truck #22: 21 unloads
+	Mining: 62.03%
+	Waiting: 0.00%
+	Unloading: 16.09%
+	Traveling: 21.88%
+
+**Truck #23: 19 unloads
+	Mining: 65.73%
+	Waiting: 0.00%
+	Unloading: 14.48%
+	Traveling: 19.79%
+
+**Truck #24: 20 unloads
+	Mining: 63.98%
+	Waiting: 0.00%
+	Unloading: 15.19%
+	Traveling: 20.83%
+
+**Truck #25: 19 unloads
+	Mining: 66.67%
+	Waiting: 0.00%
+	Unloading: 13.91%
+	Traveling: 19.43%
+
+**Truck #26: 20 unloads
+	Mining: 63.72%
+	Waiting: 0.00%
+	Unloading: 15.45%
+	Traveling: 20.83%
+
+**Truck #27: 22 unloads
+	Mining: 59.38%
+	Waiting: 0.00%
+	Unloading: 17.48%
+	Traveling: 23.14%
+
+**Truck #28: 21 unloads
+	Mining: 62.50%
+	Waiting: 0.00%
+	Unloading: 15.66%
+	Traveling: 21.84%
+
+**Truck #29: 19 unloads
+	Mining: 65.52%
+	Waiting: 0.00%
+	Unloading: 14.69%
+	Traveling: 19.79%
+
+**Truck #30: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 15.00%
+	Traveling: 19.38%
+
+**Truck #31: 22 unloads
+	Mining: 59.57%
+	Waiting: 0.00%
+	Unloading: 17.52%
+	Traveling: 22.92%
+
+**Truck #32: 21 unloads
+	Mining: 61.46%
+	Waiting: 0.00%
+	Unloading: 16.15%
+	Traveling: 22.40%
+
+**Truck #33: 20 unloads
+	Mining: 63.30%
+	Waiting: 0.00%
+	Unloading: 15.87%
+	Traveling: 20.83%
+
+**Truck #34: 19 unloads
+	Mining: 63.89%
+	Waiting: 0.00%
+	Unloading: 16.32%
+	Traveling: 19.79%
+
+**Truck #35: 20 unloads
+	Mining: 62.50%
+	Waiting: 0.00%
+	Unloading: 17.07%
+	Traveling: 20.43%
+
+**Truck #36: 19 unloads
+	Mining: 64.58%
+	Waiting: 0.00%
+	Unloading: 15.49%
+	Traveling: 19.93%
+
+**Truck #37: 19 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 16.15%
+	Traveling: 20.31%
+
+**Truck #38: 18 unloads
+	Mining: 67.33%
+	Waiting: 0.00%
+	Unloading: 13.92%
+	Traveling: 18.75%
+
+**Truck #39: 21 unloads
+	Mining: 61.46%
+	Waiting: 0.00%
+	Unloading: 17.15%
+	Traveling: 21.39%
+
+**Truck #40: 22 unloads
+	Mining: 60.42%
+	Waiting: 0.00%
+	Unloading: 16.39%
+	Traveling: 23.19%
+
+**Truck #41: 20 unloads
+	Mining: 64.17%
+	Waiting: 0.00%
+	Unloading: 15.00%
+	Traveling: 20.83%
+
+**Truck #42: 18 unloads
+	Mining: 66.37%
+	Waiting: 0.00%
+	Unloading: 14.88%
+	Traveling: 18.75%
+
+**Truck #43: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.45%
+	Traveling: 21.01%
+
+**Truck #44: 20 unloads
+	Mining: 64.31%
+	Waiting: 0.00%
+	Unloading: 14.86%
+	Traveling: 20.83%
+
+**Truck #45: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.45%
+	Traveling: 21.01%
+
+**Truck #46: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.26%
+	Traveling: 21.20%
+
+**Truck #47: 19 unloads
+	Mining: 65.64%
+	Waiting: 0.00%
+	Unloading: 14.57%
+	Traveling: 19.79%
+
+**Truck #48: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 14.15%
+	Traveling: 20.23%
+
+**Truck #49: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 14.58%
+	Traveling: 19.79%
+
+**Truck #50: 20 unloads
+	Mining: 62.50%
+	Waiting: 0.00%
+	Unloading: 16.15%
+	Traveling: 21.35%
+
+**Truck #51: 18 unloads
+	Mining: 67.71%
+	Waiting: 0.00%
+	Unloading: 13.02%
+	Traveling: 19.27%
+
+**Truck #52: 20 unloads
+	Mining: 64.03%
+	Waiting: 0.00%
+	Unloading: 15.14%
+	Traveling: 20.83%
+
+**Truck #53: 19 unloads
+	Mining: 66.09%
+	Waiting: 0.00%
+	Unloading: 14.11%
+	Traveling: 19.79%
+
+**Truck #54: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 14.17%
+	Traveling: 20.21%
+
+**Truck #55: 19 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 16.15%
+	Traveling: 20.31%
+
+**Truck #56: 19 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 16.15%
+	Traveling: 20.31%
+
+**Truck #57: 18 unloads
+	Mining: 66.67%
+	Waiting: 0.00%
+	Unloading: 14.06%
+	Traveling: 19.27%
+
+**Truck #58: 19 unloads
+	Mining: 64.32%
+	Waiting: 0.00%
+	Unloading: 15.89%
+	Traveling: 19.79%
+
+**Truck #59: 23 unloads
+	Mining: 56.25%
+	Waiting: 0.00%
+	Unloading: 19.27%
+	Traveling: 24.48%
+
+**Truck #60: 19 unloads
+	Mining: 64.93%
+	Waiting: 0.00%
+	Unloading: 15.28%
+	Traveling: 19.79%
+
+**Truck #61: 21 unloads
+	Mining: 60.38%
+	Waiting: 0.00%
+	Unloading: 17.74%
+	Traveling: 21.88%
+
+**Truck #62: 17 unloads
+	Mining: 69.53%
+	Waiting: 0.00%
+	Unloading: 12.76%
+	Traveling: 17.71%
+
+**Truck #63: 17 unloads
+	Mining: 69.32%
+	Waiting: 0.00%
+	Unloading: 12.97%
+	Traveling: 17.71%
+
+**Truck #64: 19 unloads
+	Mining: 65.52%
+	Waiting: 0.00%
+	Unloading: 14.69%
+	Traveling: 19.79%
+
+**Truck #65: 18 unloads
+	Mining: 66.67%
+	Waiting: 0.00%
+	Unloading: 14.06%
+	Traveling: 19.27%
+
+**Truck #66: 23 unloads
+	Mining: 59.38%
+	Waiting: 0.00%
+	Unloading: 17.17%
+	Traveling: 23.45%
+
+**Truck #67: 18 unloads
+	Mining: 66.67%
+	Waiting: 0.00%
+	Unloading: 14.10%
+	Traveling: 19.24%
+
+**Truck #68: 18 unloads
+	Mining: 66.67%
+	Waiting: 0.00%
+	Unloading: 14.06%
+	Traveling: 19.27%
+
+**Truck #69: 18 unloads
+	Mining: 67.14%
+	Waiting: 0.00%
+	Unloading: 14.11%
+	Traveling: 18.75%
+
+**Truck #70: 18 unloads
+	Mining: 67.41%
+	Waiting: 0.00%
+	Unloading: 13.84%
+	Traveling: 18.75%
+
+**Truck #71: 21 unloads
+	Mining: 62.50%
+	Waiting: 0.00%
+	Unloading: 15.69%
+	Traveling: 21.81%
+
+**Truck #72: 21 unloads
+	Mining: 61.34%
+	Waiting: 0.00%
+	Unloading: 16.79%
+	Traveling: 21.88%
+
+**Truck #73: 19 unloads
+	Mining: 65.97%
+	Waiting: 0.00%
+	Unloading: 14.24%
+	Traveling: 19.79%
+
+**Truck #74: 19 unloads
+	Mining: 65.38%
+	Waiting: 0.00%
+	Unloading: 14.83%
+	Traveling: 19.79%
+
+**Truck #75: 19 unloads
+	Mining: 64.58%
+	Waiting: 0.00%
+	Unloading: 15.17%
+	Traveling: 20.24%
+
+**Truck #76: 20 unloads
+	Mining: 62.80%
+	Waiting: 0.00%
+	Unloading: 16.37%
+	Traveling: 20.83%
+
+**Truck #77: 21 unloads
+	Mining: 61.86%
+	Waiting: 0.00%
+	Unloading: 16.27%
+	Traveling: 21.88%
+
+**Truck #78: 18 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 15.10%
+	Traveling: 19.27%
+
+**Truck #79: 21 unloads
+	Mining: 61.84%
+	Waiting: 0.00%
+	Unloading: 16.28%
+	Traveling: 21.88%
+
+**Truck #80: 19 unloads
+	Mining: 65.47%
+	Waiting: 0.00%
+	Unloading: 14.74%
+	Traveling: 19.79%
+
+**Truck #81: 19 unloads
+	Mining: 65.52%
+	Waiting: 0.00%
+	Unloading: 14.69%
+	Traveling: 19.79%
+
+**Truck #82: 19 unloads
+	Mining: 66.68%
+	Waiting: 0.00%
+	Unloading: 13.52%
+	Traveling: 19.79%
+
+**Truck #83: 19 unloads
+	Mining: 65.52%
+	Waiting: 0.00%
+	Unloading: 14.69%
+	Traveling: 19.79%
+
+**Truck #84: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 14.55%
+	Traveling: 19.83%
+
+**Truck #85: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 14.27%
+	Traveling: 20.10%
+
+**Truck #86: 21 unloads
+	Mining: 61.46%
+	Waiting: 0.00%
+	Unloading: 16.34%
+	Traveling: 22.20%
+
+**Truck #87: 18 unloads
+	Mining: 66.67%
+	Waiting: 0.00%
+	Unloading: 14.29%
+	Traveling: 19.05%
+
+**Truck #88: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.35%
+	Traveling: 21.11%
+
+**Truck #89: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.68%
+	Traveling: 20.78%
+
+**Truck #90: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.10%
+	Traveling: 21.35%
+
+**Truck #91: 19 unloads
+	Mining: 65.62%
+	Waiting: 0.00%
+	Unloading: 14.31%
+	Traveling: 20.07%
+
+**Truck #92: 20 unloads
+	Mining: 63.04%
+	Waiting: 0.00%
+	Unloading: 16.13%
+	Traveling: 20.83%
+
+**Truck #93: 21 unloads
+	Mining: 62.14%
+	Waiting: 0.00%
+	Unloading: 15.99%
+	Traveling: 21.88%
+
+**Truck #94: 20 unloads
+	Mining: 63.54%
+	Waiting: 0.00%
+	Unloading: 15.10%
+	Traveling: 21.35%
+
+**Truck #95: 22 unloads
+	Mining: 60.42%
+	Waiting: 0.00%
+	Unloading: 16.41%
+	Traveling: 23.18%
+
+**Truck #96: 20 unloads
+	Mining: 63.80%
+	Waiting: 0.00%
+	Unloading: 15.36%
+	Traveling: 20.83%
+
+**Truck #97: 20 unloads
+	Mining: 63.21%
+	Waiting: 0.00%
+	Unloading: 15.95%
+	Traveling: 20.83%
+
+**Truck #98: 21 unloads
+	Mining: 60.66%
+	Waiting: 0.00%
+	Unloading: 17.47%
+	Traveling: 21.88%
+
+**Truck #99: 21 unloads
+	Mining: 62.55%
+	Waiting: 0.00%
+	Unloading: 15.57%
+	Traveling: 21.88%
+
+
+ --- Individual Stations ---
+**Station #0: 44 unloads
+	Idle: 65.83%
+	Unloading: 34.17%
+
+**Station #1: 44 unloads
+	Idle: 65.00%
+	Unloading: 35.00%
+
+**Station #2: 44 unloads
+	Idle: 65.43%
+	Unloading: 34.57%
+
+**Station #3: 43 unloads
+	Idle: 64.69%
+	Unloading: 35.31%
+
+**Station #4: 45 unloads
+	Idle: 64.98%
+	Unloading: 35.02%
+
+**Station #5: 44 unloads
+	Idle: 65.62%
+	Unloading: 34.38%
+
+**Station #6: 44 unloads
+	Idle: 65.09%
+	Unloading: 34.91%
+
+**Station #7: 44 unloads
+	Idle: 65.14%
+	Unloading: 34.86%
+
+**Station #8: 44 unloads
+	Idle: 64.62%
+	Unloading: 35.38%
+
+**Station #9: 45 unloads
+	Idle: 65.36%
+	Unloading: 34.64%
+
+**Station #10: 44 unloads
+	Idle: 64.57%
+	Unloading: 35.43%
+
+**Station #11: 45 unloads
+	Idle: 65.89%
+	Unloading: 34.11%
+
+**Station #12: 44 unloads
+	Idle: 66.75%
+	Unloading: 33.25%
+
+**Station #13: 44 unloads
+	Idle: 64.97%
+	Unloading: 35.03%
+
+**Station #14: 45 unloads
+	Idle: 65.68%
+	Unloading: 34.32%
+
+**Station #15: 44 unloads
+	Idle: 64.58%
+	Unloading: 35.42%
+
+**Station #16: 44 unloads
+	Idle: 65.78%
+	Unloading: 34.22%
+
+**Station #17: 44 unloads
+	Idle: 65.94%
+	Unloading: 34.06%
+
+**Station #18: 44 unloads
+	Idle: 66.74%
+	Unloading: 33.26%
+
+**Station #19: 43 unloads
+	Idle: 65.61%
+	Unloading: 34.39%
+
+**Station #20: 44 unloads
+	Idle: 66.16%
+	Unloading: 33.84%
+
+**Station #21: 44 unloads
+	Idle: 66.01%
+	Unloading: 33.99%
+
+**Station #22: 44 unloads
+	Idle: 66.72%
+	Unloading: 33.28%
+
+**Station #23: 44 unloads
+	Idle: 66.25%
+	Unloading: 33.75%
+
+**Station #24: 43 unloads
+	Idle: 65.12%
+	Unloading: 34.88%
+
+**Station #25: 43 unloads
+	Idle: 65.36%
+	Unloading: 34.64%
+
+**Station #26: 43 unloads
+	Idle: 65.35%
+	Unloading: 34.65%
+
+**Station #27: 45 unloads
+	Idle: 66.37%
+	Unloading: 33.63%
+
+**Station #28: 44 unloads
+	Idle: 64.76%
+	Unloading: 35.24%
+
+**Station #29: 43 unloads
+	Idle: 66.74%
+	Unloading: 33.26%
+
+**Station #30: 42 unloads
+	Idle: 65.10%
+	Unloading: 34.90%
+
+**Station #31: 44 unloads
+	Idle: 65.82%
+	Unloading: 34.18%
+
+**Station #32: 43 unloads
+	Idle: 66.35%
+	Unloading: 33.65%
+
+**Station #33: 43 unloads
+	Idle: 65.42%
+	Unloading: 34.58%
+
+**Station #34: 45 unloads
+	Idle: 66.22%
+	Unloading: 33.78%
+
+**Station #35: 43 unloads
+	Idle: 65.59%
+	Unloading: 34.41%
+
+**Station #36: 43 unloads
+	Idle: 66.49%
+	Unloading: 33.51%
+
+**Station #37: 44 unloads
+	Idle: 66.82%
+	Unloading: 33.18%
+
+**Station #38: 44 unloads
+	Idle: 67.36%
+	Unloading: 32.64%
+
+**Station #39: 43 unloads
+	Idle: 65.82%
+	Unloading: 34.18%
+
+**Station #40: 43 unloads
+	Idle: 67.20%
+	Unloading: 32.80%
+
+**Station #41: 43 unloads
+	Idle: 64.93%
+	Unloading: 35.07%
+
+**Station #42: 43 unloads
+	Idle: 65.90%
+	Unloading: 34.10%
+
+**Station #43: 42 unloads
+	Idle: 65.62%
+	Unloading: 34.38%
+
+**Station #44: 42 unloads
+	Idle: 66.09%
+	Unloading: 33.91%
+

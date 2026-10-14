@@ -1,3 +1,5 @@
+"""Represetnation of mining trucks and Enum for possible actions"""
+
 from dataclasses import dataclass
 from enum import StrEnum
 
@@ -12,11 +14,17 @@ class TruckPhase(StrEnum):
 
 @dataclass
 class Truck:
-    """All times are in minutes"""
+    """
+    ready_time will be None only when truck is WAITING.
+    All times are measured in minutes.
+    ready_time and task_started_at are absolute times.
+    current_station_id is the id of the station this truck
+    is unloading or waiting at.
+    """
 
     truck_id: int
     phase: TruckPhase
-    ready_time: int | None  # absolute time
+    ready_time: int | None
     current_station_id: int | None = None
 
     # statistics for report
